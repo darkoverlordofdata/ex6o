@@ -40,15 +40,26 @@ exports.regions =
 # Defines the main page menu
 #
 exports.menu =
+  Welcome :
+    uri   : '/welcome'
+    tip   : "About Exspresso"
   Home    :
     uri   : '/'
     tip   : 'Blog'
-  Katra   :
-    uri   : '/katra'
-    tip   : 'Live Long And Prosper'
+  Demos:
+    Travel  :
+      uri   : '/travel'
+      tip   : 'DB Demo'
+    Wine  :
+      uri   : '/wines'
+      tip   : 'Ajax Demo'
+    Katra  :
+      uri   : '/katra'
+      tip   : 'Live Long And Prosper'
   Admin   :
     uri   : '/admin'
     tip   : 'Login'
+
 
 
 

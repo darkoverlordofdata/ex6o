@@ -10,7 +10,7 @@ module.exports =
   #| Title for your site
   #|
   #|
-  site_name: 'Dark Overlord of Data'
+  site_name: 'Ex6o'
 
   #|
   #|--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ module.exports =
   #| A Catchy Jingle
   #|  Until there is something darker, black will do.
   #|
-  site_slogan: "\"If It Isn\'t Dark, It Just Isn\'t Data\""
+  site_slogan: "It\'s Fun To Say!"
 
 
   #|
@@ -31,7 +31,7 @@ module.exports =
   #| The image to display with site name
   #|
   #|
-  logo: "//d16acdn.aws.af.cm/images/logo.png"
+  logo: "//d16acdn.aws.af.cm/images/exspresso.png"
 
 
   #|

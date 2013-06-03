@@ -1,0 +1,17 @@
+---
+applications:
+  .:
+    name: ex6o
+    framework:
+      name: node
+      info:
+        mem: 64M
+        description: Node.js Application
+        exec: 
+    infra: aws
+    url: ${name}.${target-base}
+    mem: 128M
+    instances: 1
+    services:
+      d16a_postgresql:
+        type: postgresql

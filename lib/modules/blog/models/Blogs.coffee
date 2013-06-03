@@ -187,26 +187,40 @@ module.exports = class modules.blog.models.Blogs extends system.core.Model
   #
   _load_categories: ($next) =>
 
-    @cache.get 'blogs._load_categories', ($err, $data) =>
+    @db.from 'categories'
+    @db.get ($err, $cat) =>
+      return $next() if $err
 
-      if $data isnt false
-        @_categories = $data.categories
-        @_category_names = $data.category_names
-        return $next(null)
+      for $row in $cat.result()
+        @_categories.push $row
+        @_category_names[$row.name] = $row.name
 
-      @db.from 'categories'
-      @db.get ($err, $cat) =>
-        return $next() if $err
+      $data =
+        categories: @_categories
+        category_names: @_category_names
 
-        for $row in $cat.result()
-          @_categories.push $row
-          @_category_names[$row.name] = $row.name
+      $next()
 
-        $data =
-          categories: @_categories
-          category_names: @_category_names
-
-        @cache.save 'blogs._load_categories', $data, -1, $next
+#    @cache.get 'blogs._load_categories', ($err, $data) =>
+#
+#      if $data isnt false and $data isnt null
+#        @_categories = $data.categories
+#        @_category_names = $data.category_names
+#        return $next(null)
+#
+#      @db.from 'categories'
+#      @db.get ($err, $cat) =>
+#        return $next() if $err
+#
+#        for $row in $cat.result()
+#          @_categories.push $row
+#          @_category_names[$row.name] = $row.name
+#
+#        $data =
+#          categories: @_categories
+#          category_names: @_category_names
+#
+#        @cache.save 'blogs._load_categories', $data, -1, $next
 
   #
   # Install the Blog Module data
@@ -253,6 +267,7 @@ module.exports = class modules.blog.models.Blogs extends system.core.Model
   #
   install_blogs: ($next) =>
 
+    fs = require('fs')
     #
     # if blogs table doesn't exist, create and load initial data
     #
@@ -278,16 +293,6 @@ module.exports = class modules.blog.models.Blogs extends system.core.Model
         body:
           type: 'TEXT'
 
-      $blogs.addData
-        id: 1,
-        author_id: 2,
-        category_id: 1,
-        status: 1,
-        created_on: "2012-03-13 04:20:00",
-        updated_on: "2012-03-13 04:20:00",
-        updated_by: 2,
-        title: "About",
-        body: "<p>Dark Overlord of Data is:</p><dl><dt><strong>a web page</strong></dt><dd><em>created using e x s p r e s s o</em></dd><dt><strong>bruce davidson</strong></dt><dd><em>a software developer who lives in seattle with his wife and daughter, two cats, one dog, and an electric guitar</em></dd></dl>"
 
 
 

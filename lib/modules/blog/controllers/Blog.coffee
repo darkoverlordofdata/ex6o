@@ -22,6 +22,7 @@ module.exports = class Blog extends application.core.AdminController
 
   constructor: ($args...) ->
 
+
     super $args...
     @load.model 'Blogs'
 
@@ -80,7 +81,7 @@ module.exports = class Blog extends application.core.AdminController
       # Edit the article
       #
       @blogs.getById $id, ($err, $doc) =>
-        @theme.view 'editz', $err || {
+        @theme.view 'edit', $err || {
           form        :
             action    : "/blog/edit/#{$id}"
             hidden    :

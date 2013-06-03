@@ -1,4 +1,4 @@
-# Ex6o
+# Ex6o - The Expresso Demo
 
 [Exspresso Demo] (http://ex6o.aws.cf.cm/)
 

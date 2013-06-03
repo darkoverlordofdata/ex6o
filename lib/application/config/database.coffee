@@ -27,6 +27,9 @@
 #|
 #
 
+DEFAULT_DRIVER = 'postgres'
+DEFAULT_PORT = 5432
+
 credential = ($name) ->
 
   #
@@ -72,11 +75,11 @@ credential = ($name) ->
   #
   else
     switch $name
-      when 'dbdriver' then 'mysql'
+      when 'dbdriver' then DEFAULT_DRIVER
       when 'username' then 'demo'
       when 'password' then 'demo'
       when 'hostname' then 'localhost'
-      when 'port'     then 3306
+      when 'port'     then DEFAULT_PORT
       when 'database' then 'demo'
 
 module.exports =
@@ -102,7 +105,7 @@ module.exports =
       password: credential('password')
       database: credential('database')
       dbdriver: credential('dbdriver')
-      dbprefix: 'ex5o_'
+      dbprefix: 'ex6o_'
       db_debug: true
       cache_on: false
       cachedir: ''
@@ -119,7 +122,7 @@ module.exports =
       password: ''
       database: ''
       dbdriver: 'mysql'
-      dbprefix: 'ex5o_'
+      dbprefix: 'ex6o_'
       db_debug: true
       cache_on: false
       cachedir: ''
@@ -137,7 +140,7 @@ module.exports =
       password: ''
       database: ''
       dbdriver: 'postgres'
-      dbprefix: 'ex5o_'
+      dbprefix: 'ex6o_'
       db_debug: true
       cache_on: false
       cachedir: ''
@@ -152,7 +155,7 @@ module.exports =
       hostname: ''
       username: ''
       password: ''
-      database: './ex5o_demo.sqlite'
+      database: './ex6o_demo.sqlite'
       dbdriver: 'sqlite'
       dbprefix: ''
       db_debug: true
