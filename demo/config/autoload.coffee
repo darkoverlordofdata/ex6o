@@ -30,10 +30,7 @@ module.exports =
   #|  $autoload['packages: [APPPATH+'vendor', '/usr/local/shared']
   #|
   #
-  packages: [
-    APPPATH+'vendor/ckeditor/'
-    APPPATH+'vendor/gravatar/'
-  ]
+  packages: []
   #
   #| -------------------------------------------------------------------
   #|  Auto-load Libraries
@@ -43,9 +40,9 @@ module.exports =
   #|
   #| Prototype:
   #|
-  #|	$autoload['libraries: ['database']
+  #|	libraries: ['database']
   #
-  libraries: ['database'] #, 'Session/session']
+  libraries: ['database']
   
   #
   #| -------------------------------------------------------------------
@@ -56,7 +53,7 @@ module.exports =
   #|
   #| Prototype:
   #|
-  #|	$autoload['drivers: ['session']
+  #|	drivers: ['session']
   #
   drivers: ['session', 'cache']
   
@@ -68,7 +65,7 @@ module.exports =
   #|
   #|	helper: ['url', 'file']
   #
-  helper: ['form', 'url', 'html', 'ckeditor', 'date', 'inflector', 'file', 'directory']
+  helper: ['form', 'url', 'html', 'date', 'inflector', 'file', 'directory']
   
   #
   #| -------------------------------------------------------------------
@@ -76,7 +73,7 @@ module.exports =
   #| -------------------------------------------------------------------
   #| Prototype:
   #|
-  #|	$autoload['config: ['config1', 'config2']
+  #|	config: ['config1', 'config2']
   #|
   #| NOTE: This item is intended for use ONLY if you have created custom
   #| config files.  Otherwise, leave it blank.
@@ -90,7 +87,7 @@ module.exports =
   #| -------------------------------------------------------------------
   #| Prototype:
   #|
-  #|	$autoload['language: ['lang1', 'lang2']
+  #|	language: ['lang1', 'lang2']
   #|
   #|
   #

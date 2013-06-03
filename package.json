@@ -20,7 +20,7 @@
     "coffee-script": "*",
     "exspresso": "*",
     "bcrypt": "*",
-    "redis": "~0.8.3"
+    "redis": "*"
   },
   "scripts": {
     "start": "node index --install",
