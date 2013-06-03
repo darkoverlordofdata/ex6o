@@ -1,0 +1,36 @@
+{
+  "name": "ex50",
+  "version": "0.0.1",
+  "description": "Exspresso Demo",
+  "keywords": [
+    "framework",
+    "web",
+    "coffee-script",
+    "mvc",
+    "desktop"
+  ],
+  "author": "bruce davidson <darkoverlordofdata@gmail.com>",
+  "contributors": [
+    {
+      "name": "bruce davidson",
+      "email": "darkoverlordofdata@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "coffee-script": "*",
+    "exspresso": "*",
+    "bcrypt": "*",
+    "redis": "~0.8.3"
+  },
+  "scripts": {
+    "start": "node index",
+    "test": "cake test"
+  },
+  "repository": "git://github.com/darkoverlordofdata/exspresso",
+  "main": "index",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "license": "MIT"
+}
